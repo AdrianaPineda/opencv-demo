@@ -48,6 +48,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cameraView" destination="wKm-Aa-okQ" id="Cnq-F0-hJE"/>
                         <outlet property="openCVVersionLabel" destination="dQ6-Hg-aMp" id="gWy-Aj-Ejv"/>
                     </connections>
                 </viewController>
