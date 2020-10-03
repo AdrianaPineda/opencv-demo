@@ -9,12 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var openCVVersionLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupUI()
     }
 
+    private func setupUI() {
+        openCVVersionLabel.text = OpenCVWrapper.openCVVersionString()
+    }
 
+    @IBAction func startButtonClicked(_: Any) {}
 }
-

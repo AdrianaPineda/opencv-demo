@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014679902528F74A008857D1 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0146798F2528F74A008857D1 /* OpenCVWrapper.mm */; };
 		019BF0C02528F2500095DDAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF0BF2528F2500095DDAE /* AppDelegate.swift */; };
 		019BF0C22528F2500095DDAE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF0C12528F2500095DDAE /* SceneDelegate.swift */; };
 		019BF0C42528F2500095DDAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019BF0C32528F2500095DDAE /* ViewController.swift */; };
@@ -17,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0146798D2528F74A008857D1 /* OpenCVDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCVDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		0146798E2528F74A008857D1 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		0146798F2528F74A008857D1 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		014679912528F7A0008857D1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		019BF0BC2528F2500095DDAE /* OpenCVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		019BF0BF2528F2500095DDAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		019BF0C12528F2500095DDAE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014679922528FB2E008857D1 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				0146798E2528F74A008857D1 /* OpenCVWrapper.h */,
+				0146798F2528F74A008857D1 /* OpenCVWrapper.mm */,
+			);
+			path = OpenCV;
+			sourceTree = "<group>";
+		};
 		019BF0B32528F2500095DDAE = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +77,7 @@
 		019BF0BE2528F2500095DDAE /* OpenCVDemo */ = {
 			isa = PBXGroup;
 			children = (
+				014679922528FB2E008857D1 /* OpenCV */,
 				019BF0BF2528F2500095DDAE /* AppDelegate.swift */,
 				019BF0C12528F2500095DDAE /* SceneDelegate.swift */,
 				019BF0C32528F2500095DDAE /* ViewController.swift */,
@@ -70,6 +85,8 @@
 				019BF0C82528F2540095DDAE /* Assets.xcassets */,
 				019BF0CA2528F2540095DDAE /* LaunchScreen.storyboard */,
 				019BF0CD2528F2540095DDAE /* Info.plist */,
+				0146798D2528F74A008857D1 /* OpenCVDemo-Bridging-Header.h */,
+				014679912528F7A0008857D1 /* PrefixHeader.pch */,
 			);
 			path = OpenCVDemo;
 			sourceTree = "<group>";
@@ -126,6 +143,7 @@
 				TargetAttributes = {
 					019BF0BB2528F2500095DDAE = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -230,6 +248,7 @@
 			files = (
 				019BF0C42528F2500095DDAE /* ViewController.swift in Sources */,
 				019BF0C02528F2500095DDAE /* AppDelegate.swift in Sources */,
+				014679902528F74A008857D1 /* OpenCVWrapper.mm in Sources */,
 				019BF0C22528F2500095DDAE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,6 +394,7 @@
 			baseConfigurationReference = C62EDE4D96338C5B7D7A7997 /* Pods-OpenCVDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenCVDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -383,6 +403,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pineda.adriana.OpenCVDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVDemo/OpenCVDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -393,6 +415,7 @@
 			baseConfigurationReference = ADDC4F38984C1CA0220077B3 /* Pods-OpenCVDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OpenCVDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -401,6 +424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pineda.adriana.OpenCVDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVDemo/OpenCVDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
