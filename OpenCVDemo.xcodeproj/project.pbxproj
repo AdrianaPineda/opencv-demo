@@ -121,6 +121,7 @@
 				019BF0BA2528F2500095DDAE /* Resources */,
 				9E7437AFB97BCA05EFBA5457 /* [CP] Embed Pods Frameworks */,
 				C7A563F06EDA9FD72AC7502B /* [CP] Copy Pods Resources */,
+				014679932528FD1A008857D1 /* Linter */,
 			);
 			buildRules = (
 			);
@@ -179,6 +180,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		014679932528FD1A008857D1 /* Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Linter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null && which swiftlint >/dev/null; then\n  swiftformat --config .swiftformat . \n  swiftlint --config .swiftlint.yml\nelse\n  echo \"warning: SwiftFormat or SwiftLint not installed, download from https://github.com/nicklockwood/SwiftFormat or https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		7ECF519E0C157230308EF936 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
